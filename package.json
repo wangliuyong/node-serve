@@ -1,22 +1,46 @@
 {
-  "name": "serve",
+  "name": "node-serve",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.11.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "egg-scripts start --daemon --title=egg-server-node-serve",
+    "stop": "egg-scripts stop --title=egg-server-node-serve",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangliuyong/node-serve.git"
+    "url": ""
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wangliuyong/node-serve/issues"
-  },
-  "homepage": "https://github.com/wangliuyong/node-serve#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "license": "MIT"
 }
