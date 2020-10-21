@@ -1,0 +1,22 @@
+{
+  "name": "serve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangliuyong/node-serve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangliuyong/node-serve/issues"
+  },
+  "homepage": "https://github.com/wangliuyong/node-serve#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
