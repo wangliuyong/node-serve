@@ -1,9 +1,8 @@
 'use strict';
-
-/** @type Egg.EggPlugin */
-module.exports = {
-  // had enabled by egg
-  // static: {
-  //   enable: true,
-  // }
+/**
+ * 模板引擎:用于渲染页面数据
+ */
+exports.nunjucks = {
+    enable: true,
+    package: 'egg-view-nunjucks',
 };

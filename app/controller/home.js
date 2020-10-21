@@ -5,7 +5,10 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.body = 'helleo  world';
+    await ctx.render('index',{
+        page_title : "标题",
+        page_content : "模板引擎所渲染的页面"
+    });
   }
 }
 

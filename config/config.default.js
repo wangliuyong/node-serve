@@ -1,7 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-
+const path = require('path');
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -17,6 +17,25 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+
+  config.logger ={
+    dir: path.join(appInfo.baseDir, 'logs'),
+  };
+
+  config.view ={
+     // 配置视图根路径
+     root: path.join(appInfo.baseDir, 'app/view'),
+     // 是否缓存路径
+     cache: true,
+     // 配置文件默认扩展名
+     defaultExtension: '.nj',
+     // 默认渲染模板引擎
+     defaultViewEngine: 'nunjucks',
+     // 文件映射配置
+     mapping: {
+      '.nj': 'nunjucks'
+     }
+  };
 
   // add your user config here
   const userConfig = {
