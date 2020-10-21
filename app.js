@@ -21,5 +21,5 @@ app.get('/', function(req, res) {
 const server = app.listen(8081, function() {
   const host = server.address().address
   const port = server.address().port  
-  console.log(`服务器启动在：localhost:${port}`)
+  console.log(`服务器启动在：http://localhost:${port}`)
 })
