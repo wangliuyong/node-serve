@@ -7,26 +7,19 @@ const express = require('express');
  */
 const app = express();
 
-
 /* 配置框架环境 S */
 
 
 // 设置 public 为静态文件的存放文件夹
 app.use('/public', express.static('public'));
 
-
 /* 配置框架环境 E */
-
-
 app.get('/', function(req, res) {
-    res.send('Hello World');
+  res.send('Hello World');
 })
 
 const server = app.listen(8081, function() {
-
-    const host = server.address().address
-    const port = server.address().port
-    
-    console.log("Node.JS 服务器已启动，访问地址： http://%s:%s", host, port)
-
+  const host = server.address().address
+  const port = server.address().port  
+  console.log(`服务器启动在：localhost:${port}`)
 })
